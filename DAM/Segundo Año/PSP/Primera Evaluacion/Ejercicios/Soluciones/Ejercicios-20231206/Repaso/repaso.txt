@@ -1,0 +1,17 @@
+
+Crea un programa escriba tantos números aleatorios del 1 al 100 en un fichero como el número que se le pase por la entrada estandar.
+Ejemplo:
+
+Cuantos números quieres escribir:  4
+
+24
+66
+77
+21
+
+Por otro lado, crea un programa que lea ese fichero e imprima por pantalla cuantos números son menores que 50.
+
+Por último, crea un proceso padre que ejecute los anteriores 2 procesos.
+	* Para el proceso que escribe, se le deberá pasar por entrada estandar la cantidad de números que se quieren escribir.
+	* Para el proceso que lee del archivo, se deberá recoger a través de la memoria cuanto numeros son menores que 50.
+

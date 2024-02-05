@@ -1,0 +1,18 @@
+	
+Hola a tod@s,
+
+Os dejo las soluciones de los tres ejercicios de entrenamiento. Además, he creado una carpeta "ejercicios" donde se irán subiendo tanto los enunciados como sus soluciones. Ahora mismo en esa carpeta tenéis subido el ejercicio de ayer de "LeerNombre" con su solución. Comentar dos cosas:
+
+Las últimas líneas del main os he dejado como recoger el error que nos devuelve el proceso (En caso de qué tenga algún error). ¿Para que es útil esto? Pues ayer ha sido bastante habitual que no nos encontrase el ejecutable LeerNombre.class, así pues, si no lo encuentra porque el directory no es correcto, nos devolverá un error diciéndonos que no se encuentra la clase "LeerNombre"
+Para verificar desde que directorio se está ejecutando nuestro proceso padre podéis usar: System.getProperty("user.dir"). Si imprimimos esto por pantalla nos devolverá la ruta absoluta. 
+Ojo si nuestro proyecto tiene packages. Con esto me refiero a que tiene subdirectorios típicos como org.example. ¿Qué hacer si tenemos paquetes? Debemos cambiar la manera de crear nuestro proceso. 
+Sería algo así: new ProcessBuilder("java", "org.example.LeerNombre");
+Creo que por defecto el IDE en Windows no crea packages, pero de todas formas estad seguros.
+
+La semana que viene no hay clase, ya que el viernes se hace puente, así que estaremos dos semanas sin clase. Os subiré algún ejercicio para quien quiera ir practicando.
+
+De todas formas, la próxima clase vamos a dedicar la primera media hora a hacer entre todos el ejercicio LeerNombre desde 0. Vamos a intentar también darle una vuelta y cambiar cosas a este ejercicio para que se pueda entender más claramente los conceptos básicos de comunicación entre procesos.
+
+Cualquier cosa ya sabéis.
+
+Buen finde!

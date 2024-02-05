@@ -1,0 +1,4 @@
+Odoo
+http://localhost:8069/
+usuario: animacion96@gmail.com
+contraseña: abc123.

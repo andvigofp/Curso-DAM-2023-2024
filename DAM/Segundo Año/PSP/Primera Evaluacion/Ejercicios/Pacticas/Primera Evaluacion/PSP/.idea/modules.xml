@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Pacticas/Primera Evaluacion/Argumentos/Argumentos.iml" filepath="$PROJECT_DIR$/Pacticas/Primera Evaluacion/Argumentos/Argumentos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pacticas/Primera Evaluacion/CadenaCincoVeces/CadenaCincoVeces.iml" filepath="$PROJECT_DIR$/Pacticas/Primera Evaluacion/CadenaCincoVeces/CadenaCincoVeces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pacticas/Primera Evaluacion/EjerciciosProcesos/EjerciciosProcesos.iml" filepath="$PROJECT_DIR$/Pacticas/Primera Evaluacion/EjerciciosProcesos/EjerciciosProcesos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HorarioClase/HorarioClase.iml" filepath="$PROJECT_DIR$/HorarioClase/HorarioClase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PSP.iml" filepath="$PROJECT_DIR$/.idea/PSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pacticas/Primera Evaluacion/Procesos_Java/Procesos_Java.iml" filepath="$PROJECT_DIR$/Pacticas/Primera Evaluacion/Procesos_Java/Procesos_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pacticas/Primera Evaluacion/Sumar/Sumar.iml" filepath="$PROJECT_DIR$/Pacticas/Primera Evaluacion/Sumar/Sumar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pacticas/Primera Evaluacion/untitled/untitled.iml" filepath="$PROJECT_DIR$/Pacticas/Primera Evaluacion/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>

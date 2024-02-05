@@ -1,0 +1,7 @@
+Variables DNI, Nombre, Saldo
+
+Jugar Con Date
+
+Método retirarDinero
+
+Método sacarDinero
