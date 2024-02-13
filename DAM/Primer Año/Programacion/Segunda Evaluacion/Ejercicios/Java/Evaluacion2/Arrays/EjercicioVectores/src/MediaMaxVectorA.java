@@ -42,13 +42,13 @@ public class MediaMaxVectorA {
     }
 
     // //Método para calcular máximo  de un vector
-    static int calcularMax(int listaEnteros[]) {
+    static int calcularMax(int vectorMax[]) {
         int max;
-        int auxiliar = listaEnteros[0];
+        int auxiliar = vectorMax[0];
 
-        for (int i = 0; i < listaEnteros.length; i++) {
-            for (int j = 1; j < listaEnteros.length - 1; j++) {
-                max = (listaEnteros[i] > listaEnteros[j]) ? listaEnteros[i] : listaEnteros[j];
+        for (int i = 0; i < vectorMax.length; i++) {
+            for (int j = 1; j < vectorMax.length - 1; j++) {
+                max = (vectorMax[i] > vectorMax[j]) ? vectorMax[i] : vectorMax[j];
                 if (max > auxiliar) {
                     auxiliar = max;
                 }
