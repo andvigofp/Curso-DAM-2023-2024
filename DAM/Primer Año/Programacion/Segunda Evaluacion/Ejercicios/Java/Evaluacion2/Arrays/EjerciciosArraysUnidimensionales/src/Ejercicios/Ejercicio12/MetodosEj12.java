@@ -29,7 +29,7 @@ public class MetodosEj12 {
         System.out.println("-------------------------------------");
     }
 
-    //Métedodo para rotar la arary mediante la posición del arrat
+    //Métedos para rotar la arary mediante la posición del array
     public static int[] rotacionArray(int[] numeros, int posInicial, int posFinal) {
         int[] auxiliar = new int[numeros.length];
         for (int i = 0; i < numeros.length; i++) {
@@ -49,7 +49,7 @@ public class MetodosEj12 {
         return auxiliar;
     }
 
-    //Método para mostrar el resultado final del array
+    //Métodos para mostrar el resultado final del array
     public static void resultadoArrayFinal(int[] numeros) {
         System.out.println("\nContenido del array junto al índice:");
         System.out.println("-------------------------------------");

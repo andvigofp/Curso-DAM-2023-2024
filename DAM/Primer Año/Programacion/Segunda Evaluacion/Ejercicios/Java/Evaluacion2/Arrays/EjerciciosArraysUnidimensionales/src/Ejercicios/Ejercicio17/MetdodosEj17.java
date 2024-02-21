@@ -26,7 +26,7 @@ public class MetdodosEj17 {
         System.out.println("\n----------------------------");
         System.out.print("Valor\n ");
         System.out.println("----------------------------");
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array)); //Devuelve una cadena de caracteres representando el array especificado y sus elementos
 
 
     }

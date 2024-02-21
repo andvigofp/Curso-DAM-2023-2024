@@ -1,5 +1,6 @@
 package Ejercicios.Ejercicio6;
 
+
 import java.util.Scanner;
 
 public class Ejercicio6 {
@@ -14,9 +15,15 @@ public class Ejercicio6 {
     public static void main(String[] args) {
         //Leer la entrada de un usuario
         Scanner teclado = new Scanner(System.in);
+        //Arrays
+        Object[] resultado = MetodosEj6.pedirNumeros(teclado, MetodosEj6.num_Max());
 
+        int[] numeros = (int[]) resultado[0];
+        int contadorPosicionesRestantes = (int) resultado[1];
 
-        int[] numeros = MetodosEj6.pedirNumeros(teclado);
+        //Mostrar el contador de posiciones restantes
+        System.out.println("Quedan " + (contadorPosicionesRestantes -1) + " posiciones por llenar.");
+
 
         System.out.println("Array Inicial:");
         MetodosEj6.mostrarArray(numeros);

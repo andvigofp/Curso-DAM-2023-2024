@@ -1,5 +1,7 @@
 package Ejercicios.Ejercicio5;
 
+import Ejercicios.Ejercicio3.MetodosEj3;
+
 import java.util.Scanner;
 
 public class Ejercicio5 {
@@ -13,19 +15,22 @@ public class Ejercicio5 {
         Scanner teclado = new Scanner(System.in);
 
         //Arrays
-        int numeros[] = MetodosEj5.pedirNumerosMostrarMinMax(teclado);
+        Object[] resultado = MetodosEj5.pedirNumerosMostrarMinMax(teclado, MetodosEj5.num_MAX());
+
+        int[] numeros = (int[]) resultado[0];
+        int contadorPosicionesRestantes = (int) resultado[1];
+
+        //Mostrar el contador de posiciones restantes
+        System.out.println("Quedan " + (contadorPosicionesRestantes) + " posiciones por llenar.");
 
         //Variables de tipo entero maximo y mínimo de los números de un aaray
         int maximo = Integer.MIN_VALUE;
         int minimo = Integer.MAX_VALUE;
 
-
         minimo = MetodosEj5.calcularMin(numeros);
         maximo = MetodosEj5.calcularMax(numeros);
         MetodosEj5.resultado(numeros,maximo,minimo);
 
-
     }
-
 
 }

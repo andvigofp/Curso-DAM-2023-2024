@@ -44,15 +44,19 @@ public class Ejercicio18 {
 
     public static void main(String[] args) {
 
+            //Numeros aleatorios
             Random random = new Random();
-
+            //Generar números aletorios
             int[] arrayOriginal = MetodosEj18.generarArrayAleatorio(random, 10, 0, 200);
 
+            //Mostrar el resultado del array incial
             System.out.println("Array original:");
             MetodosEj18.mostrarArrayConIndice(arrayOriginal);
 
+            //Ordenar los números de menor a mayor generados
             MetodosEj18.ordenarArrayAlterno(arrayOriginal);
 
+            //Mostrar el array final, generado de menor a mayor
             System.out.println("\nArray resultado:");
             MetodosEj18.mostrarArrayConIndice(arrayOriginal);
         }

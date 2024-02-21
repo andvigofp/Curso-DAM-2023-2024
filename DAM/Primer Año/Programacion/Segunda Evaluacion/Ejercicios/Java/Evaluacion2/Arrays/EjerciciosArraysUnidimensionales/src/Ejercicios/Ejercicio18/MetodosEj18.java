@@ -3,6 +3,7 @@ package Ejercicios.Ejercicio18;
 import java.util.Random;
 
 public class MetodosEj18 {
+    //Método para generar números aleatorios
     public static int[] generarArrayAleatorio(Random random, int longitud, int min, int max) {
         int[] array = new int[longitud];
         for (int i = 0; i < array.length; i++) {
@@ -11,6 +12,7 @@ public class MetodosEj18 {
         return array;
     }
 
+    //Método para mostrar el resultado del array inicial
     public static void mostrarArrayConIndice(int[] array) {
         System.out.print("|Índice  ");
         for (int i = 0; i < array.length; i++) {
@@ -24,6 +26,7 @@ public class MetodosEj18 {
         System.out.println();
     }
 
+    //Método para ordenar los números menor y mayor de un array
     public static void ordenarArrayAlterno(int[] array) {
         int[] copiaArray = array.clone();
         int indiceMenor = 0;

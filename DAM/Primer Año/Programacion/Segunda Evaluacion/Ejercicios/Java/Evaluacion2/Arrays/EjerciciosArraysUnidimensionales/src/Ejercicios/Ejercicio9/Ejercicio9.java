@@ -1,5 +1,7 @@
 package Ejercicios.Ejercicio9;
 
+import Ejercicios.Ejercicio3.MetodosEj3;
+
 import java.util.Scanner;
 
 public class Ejercicio9 {
@@ -11,10 +13,16 @@ public class Ejercicio9 {
         //Leer la entrada del usuario
         Scanner teclado = new Scanner(System.in);
 
-            //Creamos un array para almacenar los 8 números enteros
-            int[] numeros = MetodosEj9.pedirNumeros(teclado);
+        //Pedir al usuario que ingrese los números y actualizar el contador
+        Object[] resultado = MetodosEj9.pedirNumeros(teclado, MetodosEj9.num_MAX());
+        int[] numeros = (int[]) resultado[0];
+        int contadorPosicionesRestantes = (int) resultado[1];
+
             //Mostrar el resultado de los números s son par o impar
             MetodosEj9.mostrarNumerosParImpar(numeros);
+
+        //Mostrar el contador de posiciones restantes
+        System.out.println("Quedan " + (contadorPosicionesRestantes) + " posiciones por llenar.");
 
         }
     }

@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class MetodoEj14 {
 
     //Método para pedir datos al usuario
-    public static void pediUsario(String palabra[]) {
-        Scanner teclado = new Scanner(System.in);
+    public static void pediUsario(String palabra[], Scanner teclado) {
         for (int i = 0; i < palabra.length; i++) {
             System.out.print("Ingrese la palabra " + (i) + ": ");
             palabra[i] = teclado.nextLine().trim(); // Eliminar espacios en blanco al principio y al final de la palabra

@@ -14,8 +14,9 @@ public class Ejercicio19 {
      */
 
     public static void main(String[] args) {
-
+        //Leer por teclado
         Scanner teclado = new Scanner(System.in);
+        //Generar números aleatorios
         Random random = new Random();
 
         //Generar un array de 12 números enteros aleatorios entre 0 y 200

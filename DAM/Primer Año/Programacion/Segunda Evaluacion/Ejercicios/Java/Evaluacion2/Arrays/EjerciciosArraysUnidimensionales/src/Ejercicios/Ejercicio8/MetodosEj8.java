@@ -3,6 +3,16 @@ package Ejercicios.Ejercicio8;
 import java.util.Scanner;
 
 public class MetodosEj8 {
+
+    public static int num_Max() {
+        return 12; //Longitud del array
+    }
+
+    //Método contador
+    public static void contador(int contadorPosiciones) {
+        System.out.println("Te quedan " + contadorPosiciones + " poiciones restantes.");
+    }
+
     //Método para pedir al usuario temperaturas
     public static int[] pedirTemperaturas(Scanner teclado, String[] meses) {
         int[] temperaturasMeses = new int[meses.length];

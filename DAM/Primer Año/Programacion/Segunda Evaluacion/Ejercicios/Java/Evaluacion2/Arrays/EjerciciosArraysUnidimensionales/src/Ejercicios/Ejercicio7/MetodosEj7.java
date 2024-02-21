@@ -3,6 +3,7 @@ package Ejercicios.Ejercicio7;
 import java.util.Random;
 
 public class MetodosEj7 {
+   
     //Método para generar números aleatorios en un rango dado
     public static int[] generarNumerosAleatorios(int cantidad, int min, int max) {
         Random random = new Random();
@@ -20,6 +21,8 @@ public class MetodosEj7 {
         }
         System.out.println();
     }
+
+
 
     //Método para cambiar las ocurrencias de un valor a otro
     public static void cambiarValores(int[] numeros, int valorAntiguo, int valorNuevo) {

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class MetodoEj16 {
 //Método para crear y rellenar un array con números aleatorios
-    public int[] crearArrayAleatorio(Random random, int longitud, int maximo) {
+    public static int[] crearArrayAleatorio(Random random, int longitud, int maximo) {
         int[] array = new int[longitud];
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(maximo + 1); // Números aleatorios entre 0 y maximo
@@ -14,7 +14,7 @@ public class MetodoEj16 {
     }
 
     // Método para mostrar el contenido de un array
-    public void mostrarArray(int[] array) {
+    public static void mostrarArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
@@ -22,7 +22,7 @@ public class MetodoEj16 {
     }
 
     // Método para resaltar los múltiplos de un número en el array
-    public void resaltarMultiplos(int[] array, int multiplo) {
+    public static void resaltarMultiplos(int[] array, int multiplo) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] % multiplo == 0) {
                 System.out.print("[" + array[i] + "] ");
@@ -34,7 +34,7 @@ public class MetodoEj16 {
     }
 
     // Método para realizar todas las operaciones del programa
-    public void realizarOperaciones(Scanner teclado, Random random) {
+    public static void realizarOperaciones(Scanner teclado, Random random) {
         // Crear y rellenar el array con números aleatorios entre 0 y 400
         int[] array = crearArrayAleatorio(random, 20, 400);
 

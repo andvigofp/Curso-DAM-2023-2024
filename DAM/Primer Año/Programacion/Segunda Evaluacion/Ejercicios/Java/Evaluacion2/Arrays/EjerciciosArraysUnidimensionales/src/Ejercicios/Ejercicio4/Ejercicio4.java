@@ -14,9 +14,9 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int numero[] = new int[20];
-        int cuadrado[] = new int[20];
-        int cubo[] = new int[20];
+        int numero[] = new int[MetodosEj4.num_MAx()];
+        int cuadrado[] = new int[MetodosEj4.num_MAx()];
+        int cubo[] = new int[MetodosEj4.num_MAx()];
 
 
         //Para que de números aleatorios
@@ -27,6 +27,8 @@ public class Ejercicio4 {
         MetodosEj4.numeroCubo(numero, cubo);
         //Mostrar el resultado
         MetodosEj4.resultado(numero,cubo,cuadrado);
+
+
 
 
     }
