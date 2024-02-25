@@ -1,5 +1,7 @@
 package Ejercicios.Ejercicio8;
 
+import Ejercicios.Ejercicio3.MetodosEj3;
+
 import java.util.Scanner;
 
 public class Ejercicio8 {
@@ -10,31 +12,14 @@ public class Ejercicio8 {
      */
 
     public static void main(String[] args) {
-       //Leer la entrada del usuario
+        //leer por teclado
         Scanner teclado = new Scanner(System.in);
+        //Array de meses
+        String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+        //Pedir al usario las temperaturas
+        int[] temperaturasMeses = MetodosEj8.pedirTemperaturas(teclado, meses);
+        //Resultado del array de las temperaturas mediante símbolos
+        MetodosEj8.mostrarDiagramaBarras(meses, temperaturasMeses);
 
-        //Creamos un array para almacenar las temperaturas de cada mes
-        String meses[] = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
-        int temperaraturasMeses [] = new int[12];
-        int temperaturas = temperaraturasMeses.length;
-
-
-
-        //Pedimos al usuario que ingrese la temperatura media de cada mes
-        for (int i=0; i <temperaturas; i++) {
-            System.out.println("Ingresa la temepratura media del mes "  + meses[i] + ": ");
-            temperaraturasMeses[i] = teclado.nextInt();
-        }
-
-
-
-        //Mostramos el diagrama barras horinzotales
-        for (int i =0; i<temperaturas; i++) {
-            System.out.print(meses[i] + " "  + ": ");
-            for (int j =0; j < temperaraturasMeses[i]; j++) {
-                System.out.print("#");
-            }
-            System.out.println();
-        }
     }
 }

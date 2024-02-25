@@ -21,7 +21,7 @@ public class Ejercicio2 {
         simbolos[8] = 'Q';
 
         //Para mostrar el resultado del array
-        MetodosEj1.resultadoCaracter(simbolos);
+        MetodosEj2.resultadoCaracter(simbolos);
 
         /**
          * ¿Qué sucede

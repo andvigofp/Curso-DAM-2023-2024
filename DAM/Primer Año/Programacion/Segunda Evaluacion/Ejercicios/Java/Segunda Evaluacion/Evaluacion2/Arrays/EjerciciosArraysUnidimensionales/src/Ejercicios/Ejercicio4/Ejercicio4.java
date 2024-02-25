@@ -14,54 +14,23 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int numero[] = new int[20];
-        int cuadrado[] = new int[20];
-        int cubo[] = new int[20];
+        int numero[] = new int[MetodosEj4.num_MAx()];
+        int cuadrado[] = new int[MetodosEj4.num_MAx()];
+        int cubo[] = new int[MetodosEj4.num_MAx()];
 
 
         //Para que de números aleatorios
-        numerosRandom(numero);
+        MetodosEj4.numerosRandom(numero,101);
         //Para calcular un número a su cuadrado
-        numeroCuadrado(numero, cuadrado);
+        MetodosEj4.numeroCuadrado(numero, cuadrado);
         //Para calcular un número a su cubo
-        numeroCubo(numero, cubo);
+        MetodosEj4.numeroCubo(numero, cubo);
         //Mostrar el resultado
-        resultado(numero,cubo,cuadrado);
+        MetodosEj4.resultado(numero,cubo,cuadrado);
+
+
 
 
     }
 
-    //Métdo para lanzar números aleatorios con Random
-    public static void numerosRandom(int numeros[]) {
-        Random random = new Random();
-
-        for (int i=0; i<numeros.length; i++) {
-            numeros[i] = random.nextInt(101);
-        }
-    }
-
-    //Método para calcular los numeros de un array al cuadrado
-    public static void  numeroCuadrado(int numeros[], int cuadrado[]) {
-        for (int i=0; i<numeros.length; i++) {
-            cuadrado[i] = (int) (Math.pow(numeros[i],2));
-        }
-    }
-
-    //Método para calcular los numeros de un array al cubo
-    public static void numeroCubo(int numeros[], int cubo[]) {
-        for (int i=0; i < numeros.length; i++) {
-            cubo[i] = (int) (Math.pow(numeros[i],3));
-        }
-    }
-
-    //Métdod para mostrar los resultados de los números aleatorios, cuarado y cubo
-    public static void resultado(int numeros[], int cubo[], int cuadrado[]) {
-        System.out.println("\tNúmero\tCuadrado\tCubo \n" +
-                "------------------------------");
-
-        for (int i=0; i<numeros.length; i++)  {
-            System.out.printf("%6d\t%8d\t%6d\n", numeros[i], cuadrado[i], cubo[i]);
-        }
-
-    }
 }

@@ -9,39 +9,23 @@ public class Ejercicio3 {
      */
 
     public static void main(String[] args) {
-        //Leer la entrada del usuario
+        // Leer la entrada del usuario
         Scanner teclado = new Scanner(System.in);
 
-        //Creamos el array oara almacenar almacenar 10
-        int[] numero = new int[10];
+        //Pedir al usuario que ingrese los números y actualizar el contador
+        Object[] resultado = MetodosEj3.pedirnumero(teclado, MetodosEj3.num_MAX());
+        int[] numeros = (int[]) resultado[0];
+        int contadorPosicionesRestantes = (int) resultado[1];
 
-        //Para pedir al usaurio
-        pedirnumero(numero);
+        // Resultado del array inicial
+        MetodosEj3.resultadoArrayInicial(numeros);
 
-        //Para mostar el resultado del array
-        resultadoArray(numero);
+        //Mostrar el contador de posiciones restantes
+        System.out.println("Quedan " + (contadorPosicionesRestantes) + " posiciones por llenar.");
 
-    }
+        //Para mostrar el resultado del array
+        MetodosEj3.resultadoArray(numeros);
 
-    //Método para pedir números
-    public static void pedirnumero(int numeros[]) {
-        Scanner teclado = new Scanner(System.in);
 
-        for (int i =0; i<numeros.length; i++) {
-            System.out.println("Introduce valores del array " + i + ": ");
-            numeros[i] = teclado.nextInt();
-        }
-
-        System.out.println("------------------------------");
-
-    }
-
-    //Método para mosrar el resultado
-    public static void resultadoArray(int numeros[]) {
-
-        for (int i =numeros.length -1; i>0; i--) {
-
-            System.out.println("Resultado: "+ "\t\t" + numeros[i]);
-        }
     }
 }

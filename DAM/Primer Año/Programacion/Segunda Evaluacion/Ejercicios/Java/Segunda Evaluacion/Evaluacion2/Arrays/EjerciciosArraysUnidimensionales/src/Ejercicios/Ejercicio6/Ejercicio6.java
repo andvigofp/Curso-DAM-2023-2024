@@ -1,5 +1,6 @@
 package Ejercicios.Ejercicio6;
 
+
 import java.util.Scanner;
 
 public class Ejercicio6 {
@@ -14,35 +15,23 @@ public class Ejercicio6 {
     public static void main(String[] args) {
         //Leer la entrada de un usuario
         Scanner teclado = new Scanner(System.in);
+        //Arrays
+        Object[] resultado = MetodosEj6.pedirNumeros(teclado, MetodosEj6.num_Max());
 
-        //Creamis un Array para alamecenar los números
-        int numeros[] = new int[15];
+        int[] numeros = (int[]) resultado[0];
+        int contadorPosicionesRestantes = (int) resultado[1];
+
+        //Mostrar el contador de posiciones restantes
+        System.out.println("Quedan " + (contadorPosicionesRestantes -1) + " posiciones por llenar.");
 
 
-        for (int i=0; i<numeros.length; i++) {
-            //Leemos los 15 números del array
-            System.out.println("Introduce " + i + " números:");
-            numeros[i] = teclado.nextInt();
-        }
+        System.out.println("Array Inicial:");
+        MetodosEj6.mostrarArray(numeros);
 
-        System.out.println("Array Inicial");
-        for (int i=0; i<numeros.length; i++) {
-            System.out.print(numeros[i]+ " ");
-        }
+        MetodosEj6.rotarArrayDerecha(numeros);
 
-        //Rotamos los elementos del array
-        int ultimoNumero = numeros[numeros.length -1]; //Guardamos el último número antes de que se pierda
-
-        for (int i = numeros.length -1; i>0; i--) {
-            numeros[i] = numeros[i-1]; //Movemos cada elemento una posición hacia la derecha
-        }
-
-        numeros[0] = ultimoNumero; //Ponemos el último número en la primera posición
-
-        System.out.println("\nArray rotado");
-        for (int i=0; i<numeros.length; i++) {
-            System.out.print(numeros[i] + " ");
-        }
+        System.out.println("\nArray rotado:");
+        MetodosEj6.mostrarArray(numeros);
 
     }
 }

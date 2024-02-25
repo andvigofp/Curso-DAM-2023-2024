@@ -15,13 +15,13 @@ public class Ejercicio7 {
         //Pedir valores por teclado
         Scanner teclado = new Scanner(System.in);
 
-        int[] numeros = generarNumerosAleatorios(100, 0, 20);
+        int[] numeros = MetodosEj7.generarNumerosAleatorios(100, 0, 20);
 
         //Variables de tipo entero
         int valorAntiguo, valorNuevo;
 
         System.out.println("Números generados");
-        mostrarNumeros(numeros);
+        MetodosEj7.mostrarNumeros(numeros);
 
         //Pedir dos valores por teclado
         System.out.print("Introduce el primer valor: ");
@@ -31,50 +31,11 @@ public class Ejercicio7 {
         valorNuevo = teclado.nextInt();
 
         //Cambiar las ocurrencias del primer valor por el segundo
-        cambiarValores(numeros, valorAntiguo, valorNuevo);
+        MetodosEj7.cambiarValores(numeros, valorAntiguo, valorNuevo);
 
         //Mostar la lista con los valores cambiados
         System.out.println("Números con cambios:");
-        mostrarNumerosConCambios(numeros, valorAntiguo, valorNuevo);
+        MetodosEj7.mostrarNumerosConCambios(numeros, valorAntiguo, valorNuevo);
 
-    }
-
-    //Método para generar números aleatorios en un rango dado
-    public static int[] generarNumerosAleatorios(int cantidad, int min, int max) {
-        Random random = new Random();
-        int[] numeros = new int[cantidad];
-        for (int i = 0; i < cantidad; i++) {
-            numeros[i] = random.nextInt(max - min + 1) + min;
-        }
-        return numeros;
-    }
-
-    //Métod para mostrar los números separados por espacios
-    public static void mostrarNumeros(int[] numeros) {
-        for (int numero : numeros) {
-            System.out.print(numero + " ");
-        }
-        System.out.println();
-    }
-
-    //Método para cambiar las ocurrencias de un valor a otro
-    public static void cambiarValores(int[] numeros, int valorAntiguo, int valorNuevo) {
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == valorAntiguo) {
-                numeros[i] = valorNuevo;
-            }
-        }
-    }
-
-    //Método para mostrar los números con los cambios entrecomillados
-    public static void mostrarNumerosConCambios(int[] numeros, int valorAntiguo, int valorNuevo) {
-        for (int numero : numeros) {
-            if (numero == valorNuevo) {
-                System.out.print("\"" + numero + "\" ");
-            } else {
-                System.out.print(numero + " ");
-            }
-        }
-        System.out.println();
     }
 }

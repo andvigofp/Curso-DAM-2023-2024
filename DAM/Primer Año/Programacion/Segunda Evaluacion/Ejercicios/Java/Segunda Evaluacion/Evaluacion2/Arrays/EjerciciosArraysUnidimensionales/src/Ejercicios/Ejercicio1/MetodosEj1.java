@@ -10,11 +10,5 @@ public class MetodosEj1 {
         }
     }
 
-    //Método para mostrar el resultado del array
-    public static void resultadoCaracter(char caracter[]) {
-        for (char simbolo : caracter) {
-            System.out.print("\t" + simbolo);
-        }
-    }
 }
 
