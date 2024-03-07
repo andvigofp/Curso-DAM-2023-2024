@@ -1,6 +1,6 @@
 package Ejercicios.Ej5;
 
-import Ejercicios.Ej4.Metodos;
+import Ejercicios.Ej4.MetodosEj4;
 
 public class Ej5 {
     /**
@@ -9,16 +9,16 @@ public class Ej5 {
 
     public static void main(String[] args) throws InterruptedException {
         //Array de números enteros de 4 filas de 5 columnas
-        int numeros[][] = new int[Ejercicios.Ej5.Metodos.num_MaxFila()][Ejercicios.Ej5.Metodos.num_MaxColum()];
+        int numeros[][] = new int[MetodosEj5A.num_MaxFila()][MetodosEj5A.num_MaxColum()];
 
         //Para pedir al usuario por teclado
-        Ejercicios.Ej5.Metodos.generarNumerosAleatorios(numeros);
+        MetodosEj5A.generarNumerosAleatorios(numeros);
 
         System.out.println();
-        //SumaFila
-        Ejercicios.Ej5.Metodos.sumaFila(numeros);
-        //SumaTotañ
-        Metodos.sumaTotal(numeros);
+        //Sumar por cada fila
+        MetodosEj5A.sumaFila(numeros);
+        //SumaTotal columna
+        MetodosEj5A.sumaTotal(numeros);
 
     }
 }

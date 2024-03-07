@@ -1,0 +1,3 @@
+Todo está OK
+ERROR: se ha detectado un problema
+END

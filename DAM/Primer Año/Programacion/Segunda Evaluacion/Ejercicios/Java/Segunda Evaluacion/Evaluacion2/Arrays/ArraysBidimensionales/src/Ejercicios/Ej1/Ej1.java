@@ -7,7 +7,8 @@ package Ejercicios.Ej1;
  */
 public class Ej1 {
     public static void main(String[] args) {
-        int num[][] = new int[3][6];
+        //Array bidimenisonales filas y columnas
+        int num[][] = new int[MetodosEj1.numFila()][MetodosEj1.numColumna()];
 
         num[0][0] = 0;
         num[0][1] = 30;
@@ -19,20 +20,11 @@ public class Ej1 {
         num[2][3] = 9;
         num[2][5] =11;
 
-        System.out.print("Array num\t\t");
-        for (int colum=0; colum< num[0].length; colum++) {
-            System.out.printf(String.format("Columna%3d\t", colum));
-        }
-        System.out.println();
+        MetodosEj1.mostrarColumna(num);
+
+        MetodosEj1.resultado(num);
 
 
-        for (int fila=0; fila<num.length; fila++) {
-            System.out.print("Fila " + fila + " | ");
-            for (int colum=0; colum<num[fila].length; colum++) {
-                System.out.printf(String.format("%11d ", num[fila][colum]));
-            }
-            System.out.println();
-        }
     }
 
 

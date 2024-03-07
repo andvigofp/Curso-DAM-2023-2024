@@ -10,16 +10,16 @@ public class Ej3 {
     public static void main(String[] args) {
 
     //Array de números enteros de 4 filas de 5 columnas
-    int numeros[][] = new int[Ejercicios.Ej3.Metodos.num_MaxFila()][Ejercicios.Ej3.Metodos.num_MaxColum()];
+    int numeros[][] = new int[MetodosEj3.num_MaxFila()][MetodosEj3.num_MaxColum()];
 
-    //Para pedir al usuario por teclado
-        Ejercicios.Ej3.Metodos.generarNumerosAleatorios(numeros);
+        //Para pedir al usuario por teclado
+        MetodosEj3.generarNumerosAleatorios(numeros);
 
         System.out.println();
-
-        Ejercicios.Ej3.Metodos.sumaFila(numeros);
-
-        Metodos.sumaTotal(numeros);
+        //Para sumar la filas
+        MetodosEj3.sumaFila(numeros);
+        //SumaTotal columnas
+        MetodosEj3.sumaTotal(numeros);
 
 }
 }

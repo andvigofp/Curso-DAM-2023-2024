@@ -14,16 +14,16 @@ public class Ej2 {
         //Leer por teclado
         Scanner teclado = new Scanner(System.in);
         //Array de números enteros de 4 filas de 5 columnas
-        int numeros[][] = new int[Metodos.num_MaxFila()][Metodos.num_MaxColum()];
+        int numeros[][] = new int[MetodosEj2.num_MaxFila()][MetodosEj2.num_MaxColum()];
 
         //Para pedir al usuario por teclado
-        Metodos.pedirNumero(teclado,numeros);
+        MetodosEj2.pedirNumero(teclado,numeros);
 
         System.out.println();
 
-        Metodos.sumaFila(numeros);
+        MetodosEj2.sumaFila(numeros);
 
-        Metodos.sumaTotal(numeros);
+        MetodosEj2.sumaTotal(numeros);
 
     }
 }
