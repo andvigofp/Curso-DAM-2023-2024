@@ -1,27 +1,22 @@
 package Ejercicios.Ejercicio5;
 
-public class Pinguino extends Animal{
+public class Pinguino extends Ave{
     public Pinguino(Sexo sexo) {
         super(sexo);
     }
 
-    //Método específico para los pingüinos
-    public void nadar() {
-        System.out.println("El pingüino está nadando.");
-    }
-
-    //Método para pescar
-    public void pescar() {
-        System.out.println("El pingüino está pescando.");
-    }
-
-    //Método para deslizarse en el hielo
-    public void deslizarse() {
-        System.out.println("El pingüino está deslizándose en el hielo.");
-    }
-    //Método sobreescrito para comunicarse
     @Override
-    public void comuniacarse() {
-        System.out.println("El pingino emite sonido para comunicarse.");
+    public void volar() {
+        System.out.println("Los pingüinos no pueden volar.");
+    }
+
+    @Override
+    public void ponerHuevos() {
+        System.out.println("El pingüino está poniendo huevos.");
+    }
+
+    @Override
+    public void migrar() {
+        System.out.println("Los pingüinos migran a lo largo del año.");
     }
 }

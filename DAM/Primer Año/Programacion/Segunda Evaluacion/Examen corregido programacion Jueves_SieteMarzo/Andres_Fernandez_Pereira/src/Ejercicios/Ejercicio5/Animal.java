@@ -1,9 +1,7 @@
 package Ejercicios.Ejercicio5;
 
-public abstract class Animal {
-
-    private Sexo sexo;
-
+public class Animal {
+private Sexo sexo;
 
     public Animal(Sexo sexo) {
         this.sexo = sexo;
@@ -13,18 +11,15 @@ public abstract class Animal {
         return sexo;
     }
 
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
+    public void comer() {
+        System.out.println("El animal está comiendo.");
     }
 
-    //Método que indica si el animal es salvaje
-    public boolean esSalvaje() {
-        return true;
-    }
-
-    //Método para dormir
     public void dormir() {
         System.out.println("El animal está durmiendo.");
     }
-    public abstract void comuniacarse();
+
+    public void reproducirse() {
+        System.out.println("El animal está reproduciéndose.");
+    }
 }
