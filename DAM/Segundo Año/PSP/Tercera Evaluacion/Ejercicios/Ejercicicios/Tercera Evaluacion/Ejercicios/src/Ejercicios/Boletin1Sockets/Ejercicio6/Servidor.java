@@ -13,10 +13,12 @@ import java.util.Scanner;
  */
 public class Servidor {
     public static void main(String[] args) throws IOException {
-        int puerto=6000;
+        int puerto=6000; //Puerto por el que escucha
         int cuentaCaracteres;
 
+        //Inicio del servidor
         ServerSocket servidor=new ServerSocket(puerto);
+
         System.out.println("Esperando al cliente...");
         Socket cliente=servidor.accept();
         String cadena = "";
@@ -26,6 +28,7 @@ public class Servidor {
         OutputStream salida=null;
         DataOutputStream flujoSalida=null;
 
+        //Bucle se repite hasta que pongamos un * para salir del bucle
         while(!cadena.equalsIgnoreCase("*")){
             entrada=cliente.getInputStream();
             flujoEntrada=new DataInputStream(entrada);
@@ -36,6 +39,9 @@ public class Servidor {
             flujoSalida.writeInt(cuentaCaracteres);
 
         }
+        //Cerrando servidor
+        System.out.println("Cerrando conexión...");
+
         flujoSalida.close();
         salida.close();
         flujoEntrada.close();

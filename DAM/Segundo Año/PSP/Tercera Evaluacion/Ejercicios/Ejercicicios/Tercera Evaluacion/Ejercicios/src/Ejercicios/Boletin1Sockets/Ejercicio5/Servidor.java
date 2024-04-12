@@ -15,7 +15,7 @@ import java.net.Socket;
 
 public class Servidor {
     public static void main(String[] args) throws IOException {
-        int puerto=6000;//Puerto por eñ que escucha
+        int puerto=6000;//Puerto por el que escucha
         //Inicio del servidor
         ServerSocket servidor = new ServerSocket(puerto);
         System.out.println("Escuchando por el puerto " + puerto);

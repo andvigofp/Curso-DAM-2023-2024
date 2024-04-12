@@ -8,12 +8,16 @@ public class Cliente {
     public static void main(String[] args) throws IOException {
         String host="localhost";
         int puerto=6000;
+
         Socket cliente=new Socket(host, puerto);
+
         DataOutputStream flujoSalida = null;
         DataInputStream flujoEntrada;
+
         String cadena = "";
         int numCaracteres;
         Scanner entrada=new Scanner(System.in);
+
         while(!cadena.equalsIgnoreCase("*")){
             System.out.println("Cadena: ");
             cadena=entrada.nextLine();
@@ -29,6 +33,7 @@ public class Cliente {
 
         }
         flujoSalida.close();
+        System.out.println("Fin del programa...");
         cliente.close();
     }
 }
