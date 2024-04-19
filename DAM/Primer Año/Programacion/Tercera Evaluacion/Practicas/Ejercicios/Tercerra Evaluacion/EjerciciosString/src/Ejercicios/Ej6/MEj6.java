@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MEj6 {
     //Método para solicitar una cadena de caracteres al usuario
     public static String solicitarCadena(Scanner teclado) {
-        System.out.println("Ingrese una cadena de carácetres");
+        System.out.println("Ingrese una cadena de carácteres");
         return teclado.nextLine();
     }
 

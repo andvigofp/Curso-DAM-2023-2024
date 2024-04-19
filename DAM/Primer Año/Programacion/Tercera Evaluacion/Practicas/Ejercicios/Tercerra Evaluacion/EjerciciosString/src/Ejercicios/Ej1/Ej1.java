@@ -9,8 +9,9 @@ public class Ej1 {
     public static void main(String[] args) {
         //Variable tipo string
         String st1 = "Hola Andrés";
-        //B
+        //Bucle for
         for (int i=0; i<st1.length(); i++) {
+            //Imprime caracter por caracter
             System.out.println( st1.charAt(i));
         }
     }

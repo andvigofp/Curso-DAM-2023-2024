@@ -18,6 +18,7 @@ public class Ej8 {
         try {
         //Pedir al suario el número de veces que queire comparar los nombres
         int veces = MEj8.solicitarNumeroCompraciones(teclado);
+        teclado.nextLine();
 
         for (int i=1; i<=veces; i++) {
             //Pedir al usuario los dos nombres

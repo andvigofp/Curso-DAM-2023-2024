@@ -29,7 +29,7 @@ public class MEj5 {
 
     //Método para solicitar una posción al usuario
     public static int solicitarPosicion(Scanner teclado) {
-        System.out.println("Introduce una posición (un número enetro): ");
+        System.out.println("Introduce una posición (un número entero): ");
         return teclado.nextInt();
     }
 

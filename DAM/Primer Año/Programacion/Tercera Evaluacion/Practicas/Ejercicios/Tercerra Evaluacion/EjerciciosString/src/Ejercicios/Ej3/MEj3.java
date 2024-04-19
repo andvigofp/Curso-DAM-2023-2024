@@ -1,6 +1,7 @@
 package Ejercicios.Ej3;
 
 public class MEj3 {
+    //Método para invertir el carácter
 public static String invertido(String cadena) {
     char[] caracter = cadena.toCharArray();
 

@@ -13,7 +13,7 @@ import java.util.Scanner;
  * posición que no existe en la cadena.
  */
 public class Ej5 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InputMismatchException{
         //Salida por teclado
         Scanner teclado = new Scanner(System.in);
 
@@ -26,11 +26,11 @@ public class Ej5 {
                 MEj5.verificarPosicionMostar(teclado,cadena);
             }
         }catch (InputMismatchException e) {
-            System.out.println("No se puede poner una letra " + e.toString());
+            System.out.println("No se puede poner una letra " + e.getMessage());
+
         }finally {
-            System.out.println("Siempre  se inia la excepción, es opcional");
+            System.out.println("Siempre se inicia la excepción, es opcional");
         }
-        System.out.println("Contiua el programa");
 
     }
 }

@@ -1,6 +1,8 @@
 package Ejercicios.Boletin2Sockets.Ejercicio3;
 
-public class Numeros {
+import java.io.Serializable;
+
+public class Numeros implements Serializable {
     int numero;
     long cuadrado;
     long cubo;

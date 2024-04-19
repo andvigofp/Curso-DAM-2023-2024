@@ -15,7 +15,6 @@ public class MEj10 {
     //Método para transformar la primera cadena según la segunda cadena
     public static String transformarCadena(String cadenaOriginal, String cadenaBuscada) {
         return cadenaOriginal.replace(cadenaBuscada, cadenaBuscada.toUpperCase());
-
     }
 }
 

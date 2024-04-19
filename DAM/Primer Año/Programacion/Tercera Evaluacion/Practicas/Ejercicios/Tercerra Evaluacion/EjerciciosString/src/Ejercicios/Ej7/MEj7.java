@@ -14,7 +14,7 @@ public class MEj7 {
         if (cadena1.equals(cadena2)) {
             System.out.println("Las cadenas son iguales.");
         }else {
-            System.out.println("Las cadenas son diferenetes.");
+            System.out.println("Las cadenas son diferentes.");
         }
     }
 }
