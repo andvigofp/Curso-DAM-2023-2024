@@ -1,0 +1,63 @@
+Ficheros necesarios para odoo server
+-------------------------------------------------
+/opt/oddoo/oddo_xx
+     	   /log : se crean en odoo_16 (log, config, scr)
+           /config
+           /src : se crean en src (external, oca, linked)
+     	    /external
+	    /oca
+	    /linked
+
+
+Comandos de Ubuntu
+-------------------------
+cd /opt
+sudo mkdir odoo
+sudo chown andres:andres odoo
+cd odoo/
+mkdir odoo_16
+cd odoo_16
+mkdir log config src
+cd src/
+mkdir external oca linked
+cd
+lsb_release -a : para mirar la versión de ubuntu
+
+Instalación de depencias de linux
+-----------------------------------------------------
+sudo apt update
+sudo apt upgrade
+sudo apt install aptitude
+
+sudo apt install postgresql postgresql-contrib libpq-dev python-pip language-pack-es gdebi
+
+sudo apt-get update && sudo apt-get -y install wkhtmltopdf
+
+INSTALACIÓN DEL GESTOR PAUETES NPM
+-----------------------------------------------------------	
+
+wkhtmltopdf --version: para mirar la versión
+
+sudo aptitude install npm -y: para instalar un gestor de paquetes
+
+cd /usr/bin: Entramos en este directorio
+
+ls -la nod*
+
+sudo npm install less less-plugin-clean-css
+
+ls -la less*
+
+sudo npm install less
+
+sudo npm install less-plugin-clean-css
+
+sudo aptitude install python3-pip
+
+python3 -m pip install --user --upgrade pip
+
+python3 -m pip install --user --upgrade setuptools
+
+
+
+
