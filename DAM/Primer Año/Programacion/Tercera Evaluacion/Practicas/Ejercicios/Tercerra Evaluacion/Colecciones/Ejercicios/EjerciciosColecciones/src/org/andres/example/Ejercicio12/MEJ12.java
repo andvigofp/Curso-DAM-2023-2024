@@ -1,57 +1,55 @@
 package org.andres.example.Ejercicio12;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MEJ12 {
-    // Generar una mano de 5 cartas aleatorias
-    public static List<Cartas> generarMano() {
-        List<Cartas> mano = new ArrayList<>();
-        Baraja baraja = new Baraja();
+    // Método para generar las cartas
+    public static List<Cartas> crearMazo() {
+        ArrayList<Cartas> mazo = new ArrayList<>();
+        Cartas cartaAux = new Cartas();
+        mazo.add(cartaAux);
+
         for (int i = 0; i < 5; i++) {
-            mano.add(baraja.tomarCarta());
+            do {
+                cartaAux = new Cartas();
+            } while (mazo.contains(cartaAux));
+
+            mazo.add(cartaAux);
         }
-        return mano;
+        return mazo;
     }
 
-    // Mostrar las cartas de la mano
-    public static void mostrarCartas(List<Cartas> mano) {
-        System.out.println("Cartas:");
-        for (Cartas carta : mano) {
-            System.out.println(carta);
-        }
+    // Método para asignar los puntos de las cartas
+    public static HashMap<String,Integer> asignarValoresCartas() {
+        HashMap<String, Integer> valoresCartas = new HashMap<>();
+        valoresCartas.put("As",11);
+        valoresCartas.put("2",0);
+        valoresCartas.put("3",10);
+        valoresCartas.put("4",0);
+        valoresCartas.put("5",0);
+        valoresCartas.put("6",0);
+        valoresCartas.put("7",0);
+        valoresCartas.put("Sota",2);
+        valoresCartas.put("caballo",3);
+        valoresCartas.put("Rey",4);
+
+        return valoresCartas;
     }
 
-    // Calcular el total de puntos de una mano de cartas
-    public static int calcularPuntos(List<Cartas> mano) {
-        // Mapa de valores para las figuras
-        // as → 11, tres → 10, sota → 2, caballo → 3, rey → 4; el resto de cartas no vale nada.
-        int totalPuntos = 0;
-        for (Cartas carta : mano) {
-            String figura = carta.getFigura();
-            switch (figura) {
-                case "as":
-                    totalPuntos += 11;
-                    break;
-                case "tres":
-                    totalPuntos += 10;
-                    break;
-                case "sota":
-                    totalPuntos += 2;
-                    break;
-                case "caballo":
-                    totalPuntos += 3;
-                    break;
-                case "rey":
-                    totalPuntos += 4;
-                    break;
-                default:
-                    // El resto de las cartas no suma puntos
-                    break;
-            }
+    // Método para calcular el total de puntos de una mano de cartas
+    public static int calcularPuntos(List<Cartas> mazo, HashMap<String, Integer> valoresCartas) {
+        int puntos = 0;
+        for (Cartas miCarta : mazo) {
+            puntos += valoresCartas.get(miCarta.getNumero());
         }
-        return totalPuntos;
+        return puntos;
+    }
+
+    // Método para mostrar los puntos de las cartas
+    public static void mostrarPuntos(List<Cartas> mazo, int totalPuntos) {
+        for (Cartas c : mazo) {
+            System.out.println(c);
+        }
+        System.out.println("Tienes " + totalPuntos + " puntos.");
     }
 }

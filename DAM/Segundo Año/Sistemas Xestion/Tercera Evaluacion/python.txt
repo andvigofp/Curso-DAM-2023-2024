@@ -1,0 +1,1 @@
+python3 -m pip install babel cachetools chardet decorator docutils gevent html2text jinja2 libsass lxml num2words numpy paramiko passlib phonenumbers pillow polib psutil psycopg2 pycryptodome pyOpenSSL pyPdf2 python-dateutil PyYAML reportlab suds-jurko unidecode vatnumber validate_email xmlsig xlrd XlsxWriter xlwt werkzeug zeep

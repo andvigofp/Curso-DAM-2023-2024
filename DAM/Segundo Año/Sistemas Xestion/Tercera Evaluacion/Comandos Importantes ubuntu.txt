@@ -58,6 +58,32 @@ python3 -m pip install --user --upgrade pip
 
 python3 -m pip install --user --upgrade setuptools
 
+python3 -m pip install --user --upgrade virtualenv
 
+virtualenv -p python3 env
+
+cd /env
+
+. env/bin/activate
+
+python3 -m pip install --upgrade pip
+
+python3 -m pip install --upgrade setuptools
+
+python3 -m pip install babel cachetools chardet decorator docutils gevent html2text jinja2 libsass lxml num2words numpy paramiko passlib phonenumbers pillow polib psutil psycopg2 pycryptodome pyOpenSSL pyPdf2 python-dateutil PyYAML reportlab suds-jurko unidecode vatnumber validate_email xmlsig xlrd XlsxWriter xlwt werkzeug zeep
+
+python3 -m pip install --upgrade setuptools==57.5.0 - Para solcuionar el error
+
+Volver a instalar las liberías
+
+deactivate
+
+cd oddo_16/
+cd src/
+cd oaca /
+
+sudo apt install git
+
+https://github.com/odoo/odoo
 
 

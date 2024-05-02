@@ -1,4 +1,4 @@
-package org.andres.example.Ejercicio5;
+package modelo;
 
 public class Disco{
 
@@ -9,11 +9,6 @@ public class Disco{
     private int duracion; // duración total en minutos
 
     public Disco(String fghq64, String metallica, String blackAlbum, String hardRock, int i) {
-        this.codigo=fghq64;
-        this.autor=metallica;
-        this.titulo=blackAlbum;
-        this.genero=hardRock;
-        this.duracion=i;
     }
 
     public String getCodigo() {
@@ -55,12 +50,5 @@ public class Disco{
         cadena += "\nDuración: " + this.duracion;
         cadena += "\n------------------------------------------";
         return cadena;
-    }
-
-    // Puede haber dos diiscos son  iguales, tienen el mismo código
-    // Es obligatorio pasar un objecto génerico como parámetro
-    @Override
-    public boolean equals(Object d) {
-        return (this.codigo).equals(((Disco)d).getCodigo());
     }
 }

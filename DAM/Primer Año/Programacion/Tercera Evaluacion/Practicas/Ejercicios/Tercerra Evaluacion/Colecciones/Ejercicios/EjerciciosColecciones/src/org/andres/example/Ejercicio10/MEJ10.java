@@ -34,7 +34,7 @@ public class MEJ10 {
     // Método para mostrar mensaje de bienvenida
     public static void mostrarmensjae() {
         System.out.println("Bienvenido al mini diccionario español-ingles.");
-        System.out.println("Po favor, introuzca una palabra en español.");
+        System.out.println("Po favor, introduzca una palabra en español.");
     }
 
     // Método para pedir una palabra al usuario
