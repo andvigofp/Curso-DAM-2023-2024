@@ -44,6 +44,8 @@ cd /usr/bin: Entramos en este directorio
 
 ls -la nod*
 
+https://github.com/less/less-plugin-clean-css/issues/25
+
 sudo npm install less less-plugin-clean-css
 
 ls -la less*
@@ -78,12 +80,17 @@ Volver a instalar las liberías
 
 deactivate
 
-cd oddo_16/
-cd src/
-cd oaca /
+cd /oddo_16/
+cd /src/
+cd /oaca /
 
 sudo apt install git
 
-https://github.com/odoo/odoo
+git clone  https://github.com/OCA/OCB.git -b 16.0
+
+touch link_addons.sh
+
+chmod u+x link_addons.sh
+
 
 

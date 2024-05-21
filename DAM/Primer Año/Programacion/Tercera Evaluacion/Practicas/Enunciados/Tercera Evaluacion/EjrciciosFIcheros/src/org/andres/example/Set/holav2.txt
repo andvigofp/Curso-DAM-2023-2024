@@ -1,0 +1,5 @@
+estamos
+realizando
+una lectura
+en un fichero
+de texto

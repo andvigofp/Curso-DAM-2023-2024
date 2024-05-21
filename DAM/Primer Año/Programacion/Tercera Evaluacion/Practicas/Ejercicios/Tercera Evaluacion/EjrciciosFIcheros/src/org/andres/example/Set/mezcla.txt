@@ -1,0 +1,17 @@
+hola
+1
+estamos
+2
+realizando
+3
+una lectura
+4
+en un fichero
+5
+de texto
+6
+7
+8
+9
+10
+11
