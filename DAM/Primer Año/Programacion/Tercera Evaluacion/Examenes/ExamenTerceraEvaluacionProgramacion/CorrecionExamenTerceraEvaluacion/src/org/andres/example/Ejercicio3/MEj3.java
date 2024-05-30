@@ -1,38 +1,39 @@
-package org.andres.example.Ejercicio3;
+package org.andres.example.Examen.Ejercicio3;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MEj3 {
-    //Método para guardar los resultados de un partdio de futbol en una lista, mediante un fichero
-    public static void guardarFicheroFutbol(ArrayList<PartidoFutbol> futbol, Scanner teclado) {
 
-        System.out.println("\nEquipos de Fútbol");
-        System.out.println("Introduzca el nombre equipo local:");
-        String equipLocal = teclado.nextLine();
+    public static void guardarFicheroFutbol(ArrayList<PartidosFutbol_Ej3> futbol) {
 
-        System.out.println("Introduzca los goles del equipo local:");
-        int golLocal = teclado.nextInt();
-        teclado.nextLine();
+        try (BufferedReader leer = new BufferedReader(new FileReader("Partidos.txt"))){
+            String linea;
 
-        System.out.println("Introduzca los goles del equipo visitante:");
-        int golVistante = teclado.nextInt();
-        teclado.nextLine();
+            while ((linea = leer.readLine())!=null) {
 
-        System.out.println("Introduzca el nombre del equipo visitante");
-        String equipoVisitante = teclado.nextLine();
+                //Split de la línea para obtener los datos del partido
+                String[] datos = linea.split("-");
 
-        futbol.add(new PartidoFutbol(equipLocal,equipoVisitante,golLocal,golVistante));
+                if (datos.length==4) {
+                    String equipoLocal = datos[0];
+                    int golLocal = Integer.parseInt(datos[1]);
+                    int golVisitante = Integer.parseInt(datos[2]);
+                    String equipoVisitante = datos[3];
 
-        try (BufferedWriter escribir = new BufferedWriter(new FileWriter("Partidos.txt",true))){
-            escribir.write(String.valueOf(futbol));
-            escribir.newLine();
-            System.out.println("Se ha creado el archivo Partido.txt correctamente");
-        }catch (IOException e) {
-            System.out.println("Error de E/S " + e.getMessage());
+
+                    //Crear un objecto Partidos y añadirlo a la lista
+                    PartidosFutbol_Ej3 partido = new PartidosFutbol_Ej3(equipoLocal, golLocal, golVisitante, equipoVisitante);
+                    futbol.add(partido);
+                }
+            }
+      } catch (IOException e) {
+            System.out.println("Error de Escritura/Lectura " +e.getMessage());
+        }
+
+        // Mostrar los partidos almacenados
+        for (PartidosFutbol_Ej3 partido : futbol) {
+            System.out.println(partido);
         }
     }
 }

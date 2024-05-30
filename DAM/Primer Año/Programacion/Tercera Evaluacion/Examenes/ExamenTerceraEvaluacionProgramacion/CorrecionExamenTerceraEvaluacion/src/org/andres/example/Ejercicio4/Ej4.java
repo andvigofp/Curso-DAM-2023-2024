@@ -1,6 +1,4 @@
-package org.andres.example.Ejercicio4;
-
-import org.andres.example.Ejercicio3.MEj3;
+package org.andres.example.Examen.Ejercicio4;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -12,18 +10,14 @@ import java.util.Set;
  */
 public class Ej4 {
     public static void main(String[] args) {
-        MEJ4 metodos= new MEJ4();
+        MEj4 metodos = new MEj4();
 
         //Generar lista aleatorio
         ArrayList<Integer> lista = metodos.generarListaAleatorio();
 
-        //Obtener Conjuntos
-        Set<Integer> unicos = metodos.obtenerElementosUnicos(lista);
-        Set<Integer> repetidos = metodos.obetnerElementosRepetidos(lista);
-        Set<Integer> soloUnaVez = metodos.obtenerElementosUnaSolavez(lista,repetidos);
+        Set<Integer> repetidos = metodos.obtenerElementosRepetidos(lista);
+        Set<Integer> unaVez = metodos.obtenerListaUnaVez(lista,repetidos);
 
-        //Mostrar resultados
-        metodos.mostrarResultados(lista,unicos,repetidos,soloUnaVez);
-
+        metodos.mostrarResultados(lista,repetidos,unaVez);
     }
 }

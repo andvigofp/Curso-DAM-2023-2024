@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/78415563/attributeerror-module-lxml-html-clean-has-no-attribute-defs-on-odoo-17
+https://howtoforge.es/como-instalar-el-software-erp-odoo-16-en-ubuntu-22-04/
